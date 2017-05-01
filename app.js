@@ -7,8 +7,10 @@ app.use(bodyParser.json()); // for parsing application/json
 
 app.use('/', express.static(__dirname + '/'));
 app.use('/ShowMemo', express.static(__dirname + '/'));
+app.use('/Calendar', express.static(__dirname + '/'));
 app.use('/ShowTime', express.static(__dirname + '/'));
 app.use('/WriteMemo', express.static(__dirname + '/'));
+
 
 app.all('/api/add', function (req, res, next) {
      console.log('API is called...');
